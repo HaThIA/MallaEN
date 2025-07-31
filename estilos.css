@@ -1,0 +1,106 @@
+:root {
+  --color-principal: #00b4d8;
+  --color-secundario: #caf0f8;
+  --color-texto: #000000;
+  --fondo: #e6f7fa;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--color-secundario);
+  color: var(--color-texto);
+  margin: 0;
+  padding: 1rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+.dark-mode {
+  --color-texto: #ffffff;
+  --color-principal: #0077b6;
+  --color-secundario: #023e8a;
+  background-color: var(--color-secundario);
+}
+h1 {
+  text-align: center;
+}
+.grid-malla {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+.semestre {
+  background-color: var(--color-secundario);
+  border-radius: 10px;
+  box-shadow: 2px 4px 6px rgba(0,0,0,0.1);
+  padding: 1rem;
+  width: 160px;
+}
+.ramo {
+  background-color: var(--color-principal);
+  margin: 0.3rem 0;
+  padding: 0.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.2s;
+}
+.ramo:hover {
+  opacity: 0.9;
+}
+.ramo.aprobado {
+  background-color: #198754;
+  color: white;
+  text-decoration: line-through;
+}
+.ramo.bloqueado {
+  background-color: gray;
+  color: white;
+  cursor: not-allowed;
+}
+.modo-toggle {
+  text-align: right;
+  margin-bottom: 1rem;
+}
+.color-picker-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+button {
+  background-color: var(--color-principal);
+  color: white;
+  border: none;
+  padding: 0.4rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+button:hover {
+  opacity: 0.85;
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  padding-top: 100px;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+}
+.modal-content {
+  background-color: #fff;
+  margin: auto;
+  padding: 1rem;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 8px;
+}
+.modal-content span {
+  float: right;
+  font-size: 1.4rem;
+  cursor: pointer;
+}

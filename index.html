@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Malla Curricular de Enfermería</title>
+  <link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+  <div class="modo-toggle">
+    <label>
+      <input type="checkbox" id="modoSwitch"> Modo Oscuro
+    </label>
+  </div>
+
+  <div class="color-picker-container">
+    <label>Color Primario:
+      <input type="color" id="colorPrimario" />
+    </label>
+    <label>Color Secundario:
+      <input type="color" id="colorSecundario" />
+    </label>
+    <button id="resetColores">Restablecer Colores</button>
+    <button id="resetProgreso">Reiniciar Progreso</button>
+  </div>
+
+  <h1>Malla Curricular de Enfermería</h1>
+
+  <div class="grid-malla" id="malla"></div>
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span id="cerrarModal">&times;</span>
+      <p id="mensajeModal"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
